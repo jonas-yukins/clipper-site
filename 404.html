@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Clipper</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0d0c">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='1' width='20' height='30' rx='5' fill='%2304f827'/%3E%3Cpath d='M13 10.5v11l9-5.5z' fill='%230b0d0c'/%3E%3C/svg%3E">
+  <!-- Styles are inline on purpose: GitHub Pages serves this file for any missing
+       path, including nested ones, where a relative stylesheet link would break. -->
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center;
+      padding: 32px 16px; background: #0b0d0c; color: #ecf2ee;
+      font: 400 1rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      text-align: center;
+    }
+    svg { display: block; margin: 0 auto 24px; }
+    h1 { margin: 0; font-size: clamp(1.75rem, 6vw, 2.5rem); line-height: 1.15; }
+    p { margin: 12px 0 0; color: #a6b1aa; }
+    a {
+      display: inline-flex; align-items: center; min-height: 48px; margin-top: 28px; padding: 0 22px;
+      border-radius: 999px; background: #04f827; color: #04140a; font-weight: 700; text-decoration: none;
+    }
+    a:focus-visible { outline: 3px solid #7dff92; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <svg viewBox="0 0 32 32" width="48" height="48" aria-hidden="true" focusable="false">
+      <rect x="6" y="1" width="20" height="30" rx="5" fill="#04f827"/>
+      <path d="M13 10.5v11l9-5.5z" fill="#0b0d0c"/>
+    </svg>
+    <h1>This page was cut</h1>
+    <p>We couldn't find the page you were looking for.</p>
+    <a id="home" href="/">Back to Clipper</a>
+  </main>
+  <script>
+    // On a GitHub Pages project site (user.github.io/<repo>/), "/" is the wrong home.
+    // Point the link at the first path segment instead. With a custom domain, "/" is right.
+    (function () {
+      if (/\.github\.io$/.test(location.hostname)) {
+        var repo = location.pathname.split("/")[1];
+        if (repo) document.getElementById("home").setAttribute("href", "/" + repo + "/");
+      }
+    })();
+  </script>
+</body>
+</html>
